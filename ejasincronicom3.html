@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Libro {
+        constructor(nomlibro,aut,edit,gen){
+            this.nombre= nomlibro;
+            this.autor = aut;
+            this.editorial = edit
+            this.género = gen
+        }   
+
+        mostrarLibro () {
+            
+            return `${this.nombre} - ${this.autor} -${this.editorial} - ${this.genero}`
+        }
+
+    }
+
+    // crea 3 instancias de la clase Libro
+    const libro1 = new Libro ('Harry Potter y la piedra filosofál','JK.Rowling','Salamandra','Novela');
+    const libro2 = new Libro ('El señor de los anillos', 'Tolkien','minotauro', 'Fantasia');
+    const libro3 = new Libro ('El psicoanalista','Jhon Katzenbach','Planeta', 'thriller');
+
+    //arreglo//
+
+ let libros = [libro1,libro2,libro3];
+//Filtrar libros//
+function filtrarPorAutor (libros,autor) {
+    const librosNuevos= []
+    for (const libro of libros) {
+    if (libro.autor== autor){
+        librosNuevos.push(libro)
+       return librosNuevos
+    }
+    }
+    
+    
+}
+
+
+
+    </script>
+</body>
+</html
